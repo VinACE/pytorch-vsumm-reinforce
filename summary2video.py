@@ -35,7 +35,7 @@ if __name__ == '__main__':
         os.mkdir(args.save_dir)
     vid_writer = cv2.VideoWriter(
         osp.join(args.save_dir, args.save_name),
-        cv2.VideoWriter_fourcc(*'MP4V'),
+        cv2.VideoWriter_fourcc(*'mp4v'),
         args.fps,
         (args.width, args.height),
     )
