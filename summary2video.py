@@ -8,7 +8,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--path', type=str, required=True, help="path to h5 result file")
 # parser.add_argument('-d', '--frm-dir', type=str, required=True, help="path to frame directory")
-parser.add_argument('-d', '--frm-dir', type=str, default='datasets/eccv16_dataset_summe_google_pool5.h5' required=True, help="path to frame directory")
+parser.add_argument('-d', '--frm-dir', type=str, default='datasets/eccv16_dataset_summe_google_pool5.h5', required=True, help="path to frame directory")
 parser.add_argument('-i', '--idx', type=int, default=0, help="which key to choose")
 parser.add_argument('--fps', type=int, default=30, help="frames per second")
 parser.add_argument('--width', type=int, default=640, help="frame width")
