@@ -28,6 +28,7 @@ def frm2video(frm_dir, summary, vid_writer):
             vid_writer.write(frm)
 
 if __name__ == '__main__':
+    import pdb; pdb.set_trace()
     if not osp.exists(args.save_dir):
         os.mkdir(args.save_dir)
     vid_writer = cv2.VideoWriter(

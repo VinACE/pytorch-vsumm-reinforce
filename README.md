@@ -15,6 +15,7 @@ cd pytorch-vsumm-reinforce
 # download datasets.tar.gz (173.5MB)
 wget http://www.eecs.qmul.ac.uk/~kz303/vsumm-reinforce/datasets.tar.gz
 tar -xvzf datasets.tar.gz
+# https://drive.google.com/uc?id=1Bf0beMN_ieiM3JpprghaoOwQe9QJIyAN&export=download   # Need to download the file fom google drive
 ```
 2. Make splits
 ```bash
