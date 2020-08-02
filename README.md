@@ -17,7 +17,12 @@ wget http://www.eecs.qmul.ac.uk/~kz303/vsumm-reinforce/datasets.tar.gz
 tar -xvzf datasets.tar.gz
 # https://drive.google.com/uc?id=1Bf0beMN_ieiM3JpprghaoOwQe9QJIyAN&export=download   # Need to download the file fom google drive
 https://kaiyangzhou.github.io/
-https://sites.google.com/site/vsummsite/download
+# https://sites.google.com/site/vsummsite/download
+https://sites.google.com/site/vsummsite/download --
+https://github.com/SinDongHwan/pytorch-vsumm-reinforce/blob/master/utils/generate_dataset.py
+
+Issues:
+https://github.com/KaiyangZhou/vsumm-reinforce/issues/17
 ```
 2. Make splits
 ```bash
