@@ -36,7 +36,7 @@ if __name__ == '__main__':
     if not osp.exists(args.save_dir):
         os.mkdir(args.save_dir)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    vid_writer = cv2.VideoWriter( 'vsummary.mp4', fourcc, fps = 30, size = (1280, 720))
+    vid_writer = cv2.VideoWriter( 'vsummary.mp4', fourcc, 30, (1280, 720))
     h5_res = h5py.File(args.path, 'r')
     key = h5_res.keys()[args.idx]
     summary = h5_res[key]['machine_summary'][...]
