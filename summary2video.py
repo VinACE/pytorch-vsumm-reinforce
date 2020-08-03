@@ -36,8 +36,7 @@ if __name__ == '__main__':
     if not osp.exists(args.save_dir):
         os.mkdir(args.save_dir)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    vid_writer = cv2.VideoWriter(
-        
+    vid_writer = cv2.VideoWriter(        
         osp.join(args.save_dir, args.save_name),
         fourcc,
         fps = 30,
