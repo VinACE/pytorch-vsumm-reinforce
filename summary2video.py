@@ -11,8 +11,10 @@ parser.add_argument('-p', '--path', type=str, required=True, help="path to h5 re
 parser.add_argument('-d', '--frm-dir', type=str, default='datasets/eccv16_dataset_summe_google_pool5.h5', required=True, help="path to frame directory")
 parser.add_argument('-i', '--idx', type=int, default=0, help="which key to choose")
 parser.add_argument('--fps', type=int, default=30, help="frames per second")
-parser.add_argument('--width', type=int, default=640, help="frame width")
-parser.add_argument('--height', type=int, default=480, help="frame height")
+# parser.add_argument('--width', type=int, default=640, help="frame width")
+# parser.add_argument('--height', type=int, default=480, help="frame height")
+parser.add_argument('--width', type=int, default=1280, help="frame width")
+parser.add_argument('--height', type=int, default=720, help="frame height")
 parser.add_argument('--save-dir', type=str, default='log', help="directory to save")
 parser.add_argument('--save-name', type=str, default='summary.mp4', help="video name to save (ends with .mp4)")
 args = parser.parse_args()
@@ -23,7 +25,7 @@ def frm2video(frm_dir, summary, vid_writer):
             # here frame name starts with '000001.jpg'
             # change according to your need
             # frm_name = str(idx+1).zfill(6) + '.jpg'
-            frm_name = str(idx+1) + '.jpg'
+            frm_name = str(idx+1)+ '.jpg'
             frm_path = osp.join(frm_dir, frm_name)
             frm = cv2.imread(frm_path)  
             frm = cv2.resize(frm, (args.width, args.height))
