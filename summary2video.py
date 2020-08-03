@@ -35,9 +35,10 @@ if __name__ == '__main__':
     import pdb; pdb.set_trace()
     if not osp.exists(args.save_dir):
         os.mkdir(args.save_dir)
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     vid_writer = cv2.VideoWriter(
          osp.join(args.save_dir, args.save_name),
-        cv2.VideoWriter_fourcc(*'mp4v'),
+        fourcc,
         fps = 30,
         size = (1280, 720), 
     )
