@@ -14,7 +14,7 @@ parser.add_argument('--fps', type=int, default=30, help="frames per second")
 # parser.add_argument('--width', type=int, default=640, help="frame width")
 # parser.add_argument('--height', type=int, default=480, help="frame height")
 parser.add_argument('--width', type=int, default=1280, help="frame width")
-parser.add_argument('--height', type=int, default=720, help="frame height")
+parser.add_argument('--height', type=int, default=480, help="frame height")
 parser.add_argument('--save-dir', type=str, default='log', help="directory to save")
 parser.add_argument('--save-name', type=str, default='summary.mp4', help="video name to save (ends with .mp4)")
 args = parser.parse_args()
@@ -35,20 +35,12 @@ if __name__ == '__main__':
     import pdb; pdb.set_trace()
     if not osp.exists(args.save_dir):
         os.mkdir(args.save_dir)
-    # vid_writer = cv2.VideoWriter(
-    #     osp.join(args.save_dir, args.save_name),
-    #     cv2.VideoWriter_fourcc(*'mp4v'),
-    #     args.fps,
-    #     (args.width, args.height),
-    # )
     vid_writer = cv2.VideoWriter(
-        osp.join(args.save_dir, args.save_name),
+         osp.join(args.save_dir, args.save_name),
         cv2.VideoWriter_fourcc(*'mp4v'),
         fps = 30,
-        size = (1280, 720) )
-    
-
-
+        size = (1280, 720), 
+    )
     h5_res = h5py.File(args.path, 'r')
     key = h5_res.keys()[args.idx]
     summary = h5_res[key]['machine_summary'][...]
