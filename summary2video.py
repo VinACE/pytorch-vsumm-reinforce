@@ -35,12 +35,20 @@ if __name__ == '__main__':
     import pdb; pdb.set_trace()
     if not osp.exists(args.save_dir):
         os.mkdir(args.save_dir)
+    # vid_writer = cv2.VideoWriter(
+    #     osp.join(args.save_dir, args.save_name),
+    #     cv2.VideoWriter_fourcc(*'mp4v'),
+    #     args.fps,
+    #     (args.width, args.height),
+    # )
     vid_writer = cv2.VideoWriter(
         osp.join(args.save_dir, args.save_name),
         cv2.VideoWriter_fourcc(*'mp4v'),
-        args.fps,
-        (args.width, args.height),
-    )
+        fps = 30,
+        size = (1280, 720) )
+    
+
+
     h5_res = h5py.File(args.path, 'r')
     key = h5_res.keys()[args.idx]
     summary = h5_res[key]['machine_summary'][...]
