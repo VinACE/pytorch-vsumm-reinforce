@@ -108,7 +108,7 @@ def main():
     print("==> Start training")
     start_time = time.time()
     model.train()
-    baselines = {key: 0. for key in train_keys} # baseline rewards for videos
+    baselines = {key: 0. for key in train_keys} # baseline rewards for videos0
     reward_writers = {key: [] for key in train_keys} # record reward changes for each video
 
     for epoch in range(start_epoch, args.max_epoch):
