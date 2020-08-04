@@ -22,7 +22,7 @@ args = parser.parse_args()
 def frm2video(frm_dir, summary, vid_writer):
     for idx, val in enumerate(summary):
         if val == 1:
-            import pdb; pdb.set_trace()
+            # import pdb; pdb.set_trace()
             # here frame name starts with '000001.jpg'
             # change according to your need
             frm_name = str(idx+1).zfill(6) + '.jpg'
