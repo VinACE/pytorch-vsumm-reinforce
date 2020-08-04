@@ -27,7 +27,6 @@ def frm2video(frm_dir, summary, vid_writer):
             # change according to your need
             frm_name = str(idx+1).zfill(6) + '.jpg'
             frm_path = osp.join(frm_dir, frm_name)
-            print(frm_path)
             frm = cv2.imread(frm_path)  
             frm = cv2.resize(frm, (args.width, args.height))
             vid_writer.write(frm)
