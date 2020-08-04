@@ -22,6 +22,7 @@ args = parser.parse_args()
 def frm2video(frm_dir, summary, vid_writer):
     for idx, val in enumerate(summary):
         if val == 1:
+            import pdb; pdb.set_trace()
             # here frame name starts with '000001.jpg'
             # change according to your need
             frm_name = str(idx+1).zfill(6) + '.jpg'
@@ -31,7 +32,7 @@ def frm2video(frm_dir, summary, vid_writer):
             vid_writer.write(frm)
 
 if __name__ == '__main__':
-    import pdb; pdb.set_trace()
+    
     if not osp.exists(args.save_dir):
         os.mkdir(args.save_dir)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
